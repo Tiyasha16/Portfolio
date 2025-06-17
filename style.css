@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+body {
+    color: azure;
+
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    animation: navbarAnimate 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: floralwhite;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: floralwhite;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+
+}
+
+.navbar a:hover {
+    color: darksalmon;
+
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background-image: url('Portfolio_bkg.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 70px 20% 0;
+
+
+}
+
+.home-content {
+    position: relative;
+    max-width: 600px;
+    animation: homeAnimate 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+
+}
+
+.home-sci {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    align-items: center;
+
+}
+
+.btn-box {
+    text-decoration: none;
+    color: aliceblue;
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.btn-box:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+/* animation - header */
+@keyframes navbarAnimate {
+    0% {
+        top: -60px
+    }
+
+    100% {
+        top: 0px
+    }
+}
+
+/* animation - home */
+@keyframes homeAnimate {
+    0% {
+        left: -200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+/* animation-about */
+@keyframes aboutAnimate {
+    0% {
+        right: -500px;
+        opacity: 0.1;
+    }
+
+    100% {
+        right: 200px;
+        opacity: 1;
+    }
+}
+
+
+#home {
+    scroll-behavior: smooth;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background-image: url('back.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.info {
+    position: absolute;
+    max-width: 600px;
+    right: 200px;
+    text-decoration: none;
+    color: aliceblue;
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+
+    /* justify-self: center; */
+}
+
+.info.animate {
+    animation: aboutAnimate 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.info h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    text-decoration: underline solid 2px;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 2.5%;
+}
+
+.info p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+/* animation-skills */
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.2) translateY(-10px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0px);
+    }
+}
+
+.skill {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 70px 20% 0;
+}
+
+.skill-heading {
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.skill-icons {
+    width: 100%;
+    font-size: 25px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 75px;
+}
+
+.skill-icons img {
+    width: 60px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+
+}
+
+.skill-icons img:hover {
+    width: 72px;
+    filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.6));
+}
+
+.skill-icons img.show {
+    animation: popup 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.project h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 140px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    position: relative;
+    height: 200px;
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.project-link{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 95px
+}
+.project-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link a:hover {
+    text-decoration: underline;
+}
+.project-link .live{
+    color: red;
+}

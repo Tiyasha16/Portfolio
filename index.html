@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skill</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello,It's Me</h3>
+            <h1>Tiyasha Ghosh</h1>
+            <h3>And I'm a Web Developer</h3>
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/tiyasha-ghosh-2b0115334/"
+                    style="color: aliceblue; font-size: 20px;"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Tiyasha16" style="color: aliceblue; font-size: 20px;"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="./resume.pdf" class="btn-box" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="info">
+            <h2>About Me</h2>
+            <p>I am a dedicated and adaptable Web Developer with a strong foundation in core web technologies
+                and a passion for building intuitive, user-centric applications. With experience in HTML, CSS,
+                JavaScript, and programming in C/C++, Java, Python and MySQL.</p>
+
+            <p>I bring both versatility and curiosity to every project I take on.I thrive in collaborative environments
+                where learning and ex
+                perimentation are encouraged, and I continuously seek out opportunities to improve—whether it's
+                through building projects,or exploring new technologies.</p>
+
+            <p>When I'm not coding, you'll often find
+                me learning something new in tech or experimenting with small projects to test out fresh ideas.
+                I'm excited to contribute to meaningful projects and continue growing as a developer in both
+                depth and breadth.</p>
+        </div>
+    </section>
+    <section class="skill" id="skill">
+        <div class="skill-heading">
+            <h2>Technologies</h2>
+        </div>
+        <div class="skill-icons">
+            <a class="python"><img src="./icons/python.png"></a>
+            <a class="html"><img src="./icons/html.png"></a>
+            <a class="css"><img src="./icons/css.png"></a>
+            <a class="JavaScript"><img src="./icons/js.png"></a>
+            <a class="react"><img src="./icons/react.png"></a>
+            <a class="MySQL"><img src="./icons/database.png"></a>
+        </div>
+    </section>
+    <section class="project" id="project">
+        <h1>My Projects</h1>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="./portfolio.jpg" alt="Portfolio Website">
+                <div class="project-content">
+                    <div class="project-title">Portfolio Website</div>
+                    <div class="project-desc">A dynamic and responsive portfolio website developed using HTML, CSS, and
+                        JavaScript. Showcases projects, skills, and contact information in a clean and user-friendly
+                        layout. </div>
+                    <div class="project-link">
+                        <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+                        <a class="live" href="https://github.com/yourusername/portfolio" target="_blank">Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./funngame.jpg" alt="Funn Games">
+                <div class="project-content">
+                    <div class="project-title">Funn Games</div>
+                    <div class="project-desc">A responsive and lightweight web platform, offering a collection of
+                        simple, interactive browser-based games built using core web technologies.</div>
+                    <div class="project-link">
+                        <a href="https://github.com/Tiyasha16/funngames.git" target="_blank">View on GitHub</a>
+                        <a class="live" href="https://funngames.netlify.app/" target="_blank">Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./weather.jpg" alt="Weather App">
+                <div class="project-content">
+                    <div class="project-title">Weather App</div>
+                    <div class="project-desc">A responsive weather application using HTML, CSS, and JavaScript with a
+                        focus on clean UI and user-friendly design.</div>
+                    <div class="project-link">
+                        <a href="https://github.com/Tiyasha16/WeatherApp.git" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./currency.jpg" alt="Currency Converter">
+                <div class="project-content">
+                    <div class="project-title">Currency Converter</div>
+                    <div class="project-desc">A responsive currency converter using HTML, CSS, and JavaScript,
+                        integrated with a real-time currency exchange API to provide accurate and up-to-date conversion
+                        rates.</div>
+                    <div class="project-link">
+                        <a href="https://github.com/Tiyasha16/Currency-Converter.git" target="_blank">View on GitHub</a>
+                        <a class="live" href="https://getexchangerates.netlify.app/" target="_blank">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact" style="background-image: url('background.png');background-size: cover; padding: 40px 20px;">
+        <h2 style="text-align: center; margin-bottom: 30px; color: #fff;">Contact Me</h2>
+
+        <div style="max-width: 500px; margin: auto; padding: 20px; border-radius: 10px;
+
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.6;">
+            <p><strong>Email:</strong> tiyashaghosh1990@gmail.com</p>
+            <p><strong>Phone:</strong> +91 7044647641</p>
+
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

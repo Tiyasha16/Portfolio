@@ -17,39 +17,47 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 14px 8%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     animation: navbarAnimate 0.5s ease-in;
     animation-fill-mode: forwards;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 .logo {
     position: relative;
-    font-size: 25px;
-    color: floralwhite;
-    font-weight: 600;
+    font-size: 24px;
+    color: #0f172a;
+    font-weight: 700;
     text-decoration: none;
-
+    letter-spacing: 0.04em;
 }
 
 .navbar a {
     display: inline-block;
-    font-size: 25px;
-    color: floralwhite;
+    font-size: 0.95rem;
+    color: #334155;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-
+    font-weight: 600;
+    margin-left: 30px;
+    padding: 8px 0;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .navbar a:hover {
     color: darksalmon;
+    transform: translateY(-1px);
+}
 
+.navbar a.active,
+.navbar a:focus-visible {
+    color: #0f172a;
+    text-decoration: underline;
 }
 
 .home {
@@ -155,6 +163,7 @@ body {
     justify-content: space-between;
     background-image: url('back.png');
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     padding-top: 70px;
@@ -162,17 +171,22 @@ body {
 
 .info {
     position: absolute;
-    max-width: 600px;
-    right: 200px;
-    text-decoration: none;
-    color: aliceblue;
-    border: 2px solid;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: large;
+    max-width: 650px;
+    right: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.98));
+    color: #333;
+    border: none;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid darksalmon;
+}
 
-    /* justify-self: center; */
+.info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .info.animate {
@@ -181,18 +195,24 @@ body {
 }
 
 .info h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
-    text-decoration: underline solid 2px;
-    font-size: 32px;
+    font-size: 2.2rem;
     font-weight: 700;
-    padding-bottom: 2.5%;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid darksalmon;
+    color: darksalmon;
+    text-align: center;
 }
 
 .info p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 12px;
-    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 18px;
+    text-align: justify;
+    color: #444;
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 /* animation-skills */
@@ -264,16 +284,16 @@ body {
 .project {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('background.png');
     background-size: cover;
-    padding-top: 70px;
+    padding: 70px 20px 60px;
 }
 
 .project h1 {
     font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
 }
 
 .projects-container {
@@ -339,4 +359,181 @@ body {
 }
 .project-link .live{
     color: red;
+}
+
+/* Education Section */
+.education {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    padding: 70px 20% 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.education-heading h2 {
+    font-size: 2.8rem;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.education-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.95));
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid darksalmon;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.education-degree {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: darksalmon;
+    margin-bottom: 8px;
+}
+
+.education-institution {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.education-details span {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.education-details .duration,
+.education-details .cgpa,
+.education-details .percentage {
+    font-weight: 500;
+}
+
+/* Work Experience Section */
+.experience {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('background.png');
+    background-size: cover;
+    padding: 70px 20% 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.experience-heading h2 {
+    font-size: 2.8rem;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.experience-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.95));
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid darksalmon;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.experience-header {
+    margin-bottom: 15px;
+}
+
+.experience-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: darksalmon;
+    margin-bottom: 5px;
+}
+
+.experience-company {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.experience-duration {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.experience-details {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-details li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: darksalmon;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
